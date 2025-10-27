@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - JD Scraper Pro</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background: #f5f5f5;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            border-radius: 10px;
+            margin-bottom: 40px;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .content {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            color: #667eea;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-size: 1.8em;
+        }
+
+        h3 {
+            color: #764ba2;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-size: 1.3em;
+        }
+
+        p {
+            margin-bottom: 15px;
+        }
+
+        ul {
+            margin-left: 30px;
+            margin-bottom: 15px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .last-updated {
+            font-style: italic;
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        .highlight {
+            background: #f0f4ff;
+            padding: 20px;
+            border-left: 4px solid #667eea;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: #666;
+        }
+
+        footer a {
+            color: #667eea;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .content {
+                padding: 20px;
+            }
+
+            header h1 {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Privacy Policy</h1>
+            <p>JD Scraper Pro – Unlimited JustDial Data Extractor</p>
+        </header>
+
+        <div class="content">
+            <p class="last-updated"><strong>Last updated:</strong> October 27, 2025</p>
+
+            <p>
+                This Privacy Policy describes how JD Scraper Pro ("we", "us", or "our") handles your information 
+                when you use our Chrome extension. We are committed to protecting your privacy and being transparent 
+                about our data practices.
+            </p>
+
+            <div class="highlight">
+                <strong>Key Points:</strong>
+                <ul>
+                    <li>We do NOT collect, store, or transmit your personal data to our servers</li>
+                    <li>All scraping happens locally in your browser</li>
+                    <li>Google OAuth is used only for exporting to your personal Google Sheets</li>
+                    <li>We do NOT have access to your Google account data</li>
+                </ul>
+            </div>
+
+            <h2>1. Information We Collect</h2>
+            
+            <h3>1.1 Data You Scrape</h3>
+            <p>
+                The extension scrapes publicly available business information from JustDial.com including:
+            </p>
+            <ul>
+                <li>Business names</li>
+                <li>Business addresses</li>
+                <li>Phone numbers</li>
+                <li>Ratings and review counts</li>
+                <li>Business listing URLs</li>
+            </ul>
+            <p>
+                <strong>Important:</strong> This data is stored ONLY in your browser's local storage. 
+                We do not have access to this data and it never leaves your device unless you explicitly 
+                export it to your own Google Sheets.
+            </p>
+
+            <h3>1.2 Google OAuth Data</h3>
+            <p>
+                When you choose to export data to Google Sheets, we request the following permissions:
+            </p>
+            <ul>
+                <li><code>https://www.googleapis.com/auth/spreadsheets</code> - To create and edit spreadsheets in your Google account</li>
+                <li><code>https://www.googleapis.com/auth/drive.file</code> - To create a folder and manage only the files created by this extension</li>
+            </ul>
+            <p>
+                These permissions are handled through Chrome's Identity API. We do NOT store your Google 
+                authentication tokens or have access to any other files in your Google Drive.
+            </p>
+
+            <h2>2. How We Use Your Information</h2>
+            
+            <h3>2.1 Local Processing</h3>
+            <p>
+                All scraping and data processing occurs locally in your browser. The extension:
+            </p>
+            <ul>
+                <li>Extracts data from JustDial pages you visit</li>
+                <li>Stores scraped data in Chrome's local storage (on your device only)</li>
+                <li>Processes queue items sequentially</li>
+                <li>Formats data for CSV or Google Sheets export</li>
+            </ul>
+
+            <h3>2.2 Google Sheets Export</h3>
+            <p>
+                When you click "Save to Sheets", the extension:
+            </p>
+            <ul>
+                <li>Authenticates you with Google using OAuth 2.0</li>
+                <li>Creates a folder named "JustDial Scraper Data" in YOUR Google Drive</li>
+                <li>Creates a new spreadsheet with your scraped data</li>
+                <li>Writes data directly from your browser to your Google account</li>
+            </ul>
+            <p>
+                <strong>We do NOT:</strong>
+            </p>
+            <ul>
+                <li>Store your OAuth tokens on our servers</li>
+                <li>Access your other Google Drive files</li>
+                <li>Read or modify spreadsheets you didn't create with this extension</li>
+                <li>Transmit your data to any third-party servers</li>
+            </ul>
+
+            <h2>3. Data Storage and Retention</h2>
+            
+            <h3>3.1 Local Storage</h3>
+            <p>
+                Scraped data is stored in Chrome's local storage on your device. This data persists until you:
+            </p>
+            <ul>
+                <li>Click "Clear Data" in the extension</li>
+                <li>Clear your browser data</li>
+                <li>Uninstall the extension</li>
+            </ul>
+
+            <h3>3.2 Google Drive Storage</h3>
+            <p>
+                When you export to Google Sheets, the data is stored in YOUR Google Drive account. 
+                You have full control over these files and can delete them at any time. We do not 
+                retain copies of this data.
+            </p>
+
+            <h2>4. Third-Party Services</h2>
+            
+            <h3>4.1 JustDial.com</h3>
+            <p>
+                The extension scrapes publicly available data from JustDial.com. We are not affiliated 
+                with JustDial and do not control their privacy practices. Please review JustDial's 
+                privacy policy for information about data they collect.
+            </p>
+
+            <h3>4.2 Google APIs</h3>
+            <p>
+                We use Google Sheets API and Google Drive API to enable the export feature. These APIs 
+                are subject to Google's privacy policies. Authentication is handled through Chrome's 
+                Identity API, and tokens are managed by Chrome, not by us.
+            </p>
+
+            <h2>5. Data Security</h2>
+            <p>
+                We implement the following security measures:
+            </p>
+            <ul>
+                <li>All data processing happens locally in your browser</li>
+                <li>OAuth tokens are managed securely by Chrome's Identity API</li>
+                <li>We use HTTPS for all API communications</li>
+                <li>We request minimal permissions necessary for functionality</li>
+                <li>We use the restrictive <code>drive.file</code> scope (not full Drive access)</li>
+            </ul>
+
+            <h2>6. Your Rights and Choices</h2>
+            
+            <h3>6.1 Data Control</h3>
+            <p>You have complete control over your data:</p>
+            <ul>
+                <li><strong>Clear Local Data:</strong> Click "Clear Data" button in the extension</li>
+                <li><strong>Revoke Google Access:</strong> Visit <a href="https://myaccount.google.com/permissions" target="_blank">Google Account Permissions</a></li>
+                <li><strong>Delete Exported Files:</strong> Delete spreadsheets and folders from your Google Drive</li>
+                <li><strong>Uninstall Extension:</strong> Remove the extension from Chrome to delete all local data</li>
+            </ul>
+
+            <h3>6.2 No Tracking</h3>
+            <p>
+                We do NOT use:
+            </p>
+            <ul>
+                <li>Analytics or tracking tools</li>
+                <li>Cookies (except those required by Chrome and Google APIs)</li>
+                <li>Third-party advertising</li>
+                <li>User behavior monitoring</li>
+            </ul>
+
+            <h2>7. Children's Privacy</h2>
+            <p>
+                Our extension is not intended for users under the age of 13. We do not knowingly 
+                collect information from children under 13. If you believe a child has provided 
+                us with personal information, please contact us.
+            </p>
+
+            <h2>8. Changes to This Privacy Policy</h2>
+            <p>
+                We may update this Privacy Policy from time to time. We will notify you of any 
+                changes by:
+            </p>
+            <ul>
+                <li>Updating the "Last updated" date at the top of this policy</li>
+                <li>Posting a notice in the extension (for significant changes)</li>
+            </ul>
+            <p>
+                Your continued use of the extension after changes constitutes acceptance of the 
+                updated policy.
+            </p>
+
+            <h2>9. Open Source</h2>
+            <p>
+                Our extension's code is transparent and can be reviewed. We believe in privacy 
+                through transparency. You can verify our claims by:
+            </p>
+            <ul>
+                <li>Reviewing the extension's source code</li>
+                <li>Checking Chrome's extension permissions</li>
+                <li>Monitoring network activity (you'll see only requests to JustDial and Google APIs)</li>
+            </ul>
+
+            <h2>10. Legal Compliance</h2>
+            <p>
+                We may disclose information if required by law or in response to valid legal requests 
+                from authorities. However, since we do not collect or store user data on our servers, 
+                we have minimal data to disclose.
+            </p>
+
+            <h2>11. Contact Us</h2>
+            <p>
+                If you have any questions, concerns, or requests regarding this Privacy Policy or 
+                our data practices, please contact us:
+            </p>
+            <ul>
+                <li><strong>Email:</strong> <a href="mailto:dillibabukadati@gmail.com">dillibabukadati@gmail.com</a></li>
+                <li><strong>Extension Page:</strong> <a href="https://chromewebstore.google.com/detail/jd-scraper-pro-%E2%80%93-unlimite/ccpabimndpkmedjkagmnglndlkogmjpl" target="_blank">Chrome Web Store</a></li>
+            </ul>
+
+            <h2>12. Consent</h2>
+            <p>
+                By using JD Scraper Pro, you consent to this Privacy Policy and agree to its terms. 
+                If you do not agree with this policy, please do not use the extension.
+            </p>
+
+            <div class="highlight">
+                <strong>Summary:</strong>
+                <p>
+                    JD Scraper Pro is designed with privacy in mind. We don't collect your data, 
+                    we don't track you, and we don't have servers storing your information. 
+                    Everything happens locally in your browser, and you have complete control 
+                    over your data at all times.
+                </p>
+            </div>
+        </div>
+
+        <footer>
+            <p>&copy; 2025 JD Scraper Pro. All rights reserved.</p>
+            <p style="margin-top: 10px;">
+                <a href="index.html">Home</a> | 
+                <a href="mailto:dillibabukadati@gmail.com">Contact Us</a>
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
